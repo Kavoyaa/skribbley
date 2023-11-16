@@ -1,0 +1,164 @@
+html, body { 
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow:auto;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-width: 0px;
+    border-style: solid;
+    appearance: none;
+    text-decoration: none;
+}
+
+button:hover {
+    border-width: 2px;
+    border-color: rgb(61, 76, 91);
+    
+}
+
+.bg {
+    
+    background-color: #8fbbe7;
+}
+
+.panel-left {
+    margin-right: 8px;
+    flex: 1 1 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.panel {
+    flex: 0 0 auto;
+    width: 400px;
+    background-color: #507dbca5;
+    border-radius: 8px;
+    padding: 20px;
+}
+.input-homepage {
+    flex: 0 0 auto;
+    height: 35px;
+    width: 100%;
+    color: rgb(60, 60, 60);
+    background-color: white;
+    border: 1px solid rgb(101, 101, 101);
+    border-radius: 8px;
+    transition: background-color .12s ease,border-color .12s ease;
+}
+
+.input-chatroom {
+    flex: 0 0 auto;
+    height: 32px;
+    width: 98.5%;
+    
+    color: rgb(60, 60, 60);
+    background-color: white;
+    border: 1px solid rgb(101, 101, 101);
+    border-radius: 8px;
+    transition: background-color .12s ease,border-color .12s ease;
+}
+
+.panel-right {
+    margin-left: 8px;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+        
+    }
+
+.play-button {
+    background-color: #49e256;
+    transition: background-color 80ms;
+    border-radius: 9px;
+    font-size: 2em;
+    height: 55px;
+    width: 100%;
+    margin-top: 10px;
+    color:white;
+}
+
+.create-button {
+    background-color: #3c71e3;
+    transition: background-color 80ms;
+    border-radius: 9px;
+    font-size: 1.4em;
+    height: 35px;
+    width: 100%;
+    margin-top: 10px;
+    color:white;
+}
+
+.heading {
+    color:rgb(255, 216, 61);
+    text-align: center;
+    
+    font-weight: bold;
+    margin: auto;
+    padding: 0.5%;
+    border-radius: 0px 0px 11px 11px;
+    margin-bottom: 5px;
+}
+
+.container {  
+    height: 90%;
+    display: grid;
+    grid-template-columns: 15.2% 61% 23%;
+    grid-template-rows: 0% 100% 0%;
+    gap: 0.4% 0.4%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+  
+.element {
+    height: 92.5%;
+    background-color: #507dbca5;
+}
+
+.msg-box {
+    border-color: rgb(255, 216, 61);
+    border-width: 2px;
+    border-radius: 10px 10px 8px 8px;
+    background-color: #9dc2e8;
+    height: 90%;
+    margin: 3.1%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.messages {
+    flex: -1;
+    height: 93.5%;
+    margin-bottom: 5px;
+    overflow-y: auto;
+}
+
+.players {
+    flex: -1;
+    height: 93.5%;
+    margin-bottom: 5px;
+    overflow-y: auto;
+    text-align: center;
+    margin: 5%;
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(43, 59, 75);
+    text-shadow: -1px -1px 0 rgb(217, 205, 176), 1px -1px 0 rgb(217, 205, 176), -1px 1px 0 rgb(217, 205, 176), 1px 1px 0 rgb(217, 205, 176);
+}
