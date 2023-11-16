@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+    <img src="{{ url_for('static', filename='skribbley_icon.png') }}" class="logo">
+    <div class="panels" style="display: flex;">
+        <div class="panel-left"></div>
+        
+        <div class="panel">
+            <form method="POST">
+            <input name="name" class="input-homepage" type="text" spellcheck="false" autocomplete="off" placeholder=" Enter your name" maxlength="21" data-translate="placeholder" value="{{name}}">
+            
+            <input name="roomcode" class="input-homepage" type="text" spellcheck="false" autocomplete="off" placeholder=" Room code" maxlength="21" data-translate="placeholder" style="margin-top: 5px;" value="{{roomcode}}">
+            <button name="join" type="submit" class="play-button">JOIN ROOM</button>
+            <button name="create" type="text" class="create-button">CREATE ROOM</button>
+            </form>
+            {% if error %}
+            <h3 style="color:rgba(154, 21, 0, 0.759);">{{error}}</h3>
+            {% endif %}
+        </div>
+        
+        <div class="panel-right"></div>
+    </div>
+</div>  
+
+{% endblock %}
