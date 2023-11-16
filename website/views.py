@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, request, session, redirect, url_for
 from flask_socketio import join_room, leave_room, send, SocketIO
 import random
-from flask_sqlalchemy import SQLAlchemy
 
 views = Blueprint('views', __name__)
 

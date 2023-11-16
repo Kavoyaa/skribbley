@@ -19,7 +19,7 @@ def connect(auth):
 	join_room(room)
 	send({"name": name, "message": "joined the room.", "cause": "player connect"}, to=room)
 	rooms[room]["members"] += 1
-'''
+
 @socketio.on("disconnect")
 def disconnect():
 	room = session.get("room")
@@ -32,7 +32,7 @@ def disconnect():
 			del rooms[room]
 	
 	send({"name": name, "message": "left the room.", "cause": "player disconnect"}, to=room)
-'''
+
 @socketio.on("message")
 def message(data):
 	room = session.get("room")
