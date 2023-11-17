@@ -6,7 +6,7 @@ There are future plans to add different gamemodes.
 
 <img width="600" alt="Skribbley homepage" src="website/static/skribbley-homepage.png">
 
-# Installtion and Testing
+# Installation and Testing
 
 ## Testing
 You can test out the site at https://skribbley.onrender.com. <br />
@@ -14,12 +14,12 @@ It may take a while to load.
 
 ## Installing
 
-### Installing required packages
+### Installing required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-### Running on a development server
+### Running on a development server:
 ```bash
 flask run
 ```
