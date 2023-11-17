@@ -88,7 +88,7 @@ button:hover {
     height: 55px;
     width: 100%;
     margin-top: 10px;
-    color:white;
+    color:whitesmoke;
 }
 
 .create-button {
@@ -99,7 +99,7 @@ button:hover {
     height: 35px;
     width: 100%;
     margin-top: 10px;
-    color:white;
+    color:whitesmoke;
 }
 
 .heading {
@@ -179,4 +179,14 @@ button:hover {
     border-width: 0.1px;   
     height: 100%;
     width: 99.85%;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    color:aliceblue;
+}
+
+.bottom:visited {
+    color: aliceblue;
 }
