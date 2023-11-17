@@ -34,7 +34,7 @@ def home():
 		room = roomcode
 		if create != False:
 			room = generate_code()
-			rooms[room] = {"members": 0, "messages": []}
+			rooms[room] = {"members": 0, "players": []}
 			print(room)
 		elif roomcode not in rooms:
 			return render_template("home.html", error="Room doesn't exist.", roomcode = roomcode, name=name)

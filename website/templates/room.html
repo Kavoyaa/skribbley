@@ -28,9 +28,9 @@
                 <!--<button name="send" id = "send-btn" onClick="sendMessage()" type="button" class="send-button">Send</button>-->
             </div>
             <div class="messages" id="messages">
-                <!--&nbsp Kavoya: egg <br>
-                &nbsp Aditya: potato <br>
-                &nbsp Aditya: hi <br>-->
+                <!--Kavoya: egg <br>
+                Aditya: potato <br>
+                Aditya: hi <br>-->
 
             </div>
         </div>
@@ -51,18 +51,18 @@
             if (cause == "player connect") {
                 members.push(name)
                 players.innerHTML = ""
-                members.forEach(function(item) {players.innerHTML += `&nbsp ${item}<br>\n`;})
+                members.forEach(function(item) {players.innerHTML += `<div>${item}</div>\n`;})
             }
             else {
                 members.splice(members.indexOf(name), 1)
                 players.innerHTML = ""
-                members.forEach(function(item) {players.innerHTML += `&nbsp ${item}<br>\n`;})
+                members.forEach(function(item) {players.innerHTML += `<div>${item}</div>\n`;})
             }
             
-            messages.innerHTML += `&nbsp ${name} ${message}<br>\n`;
+            messages.innerHTML = `<div>${name} ${message}</div>\n` + messages.innerHTML;
         }
         else {
-            messages.innerHTML += `&nbsp ${name} ${message}<br>\n`; 
+            messages.innerHTML = `<div>${name} ${message}</div>\n` + messages.innerHTML; 
         }
 
  
