@@ -28,16 +28,30 @@ def home():
 		if not name:
 			return render_template("home.html", error="Enter name.", roomcode = roomcode, name=name)
 		
+		if len(name) > 10:
+			name = name[:11]
+		
+		new_name = ""
+		for c in name:
+			if c.isalpha() or c.isdigit():
+				new_name += c
+		name = new_name
+
 		if join != False and not roomcode:
 			return render_template("home.html", error="Enter room code.", roomcode = roomcode, name=name)
 		
-		room = roomcode
+		room = roomcode.upper()
 		if create != False:
 			room = generate_code()
 			rooms[room] = {"members": 0, "players": []}
 			print(room)
-		elif roomcode not in rooms:
+		elif roomcode.upper() not in rooms:
 			return render_template("home.html", error="Room doesn't exist.", roomcode = roomcode, name=name)
+		
+		if name in rooms[room]["players"]:
+			
+			return render_template("home.html", error="Player with same username already in room.<br>You may try entering with a different name.", roomcode = roomcode, name=name)
+			
 
 		session["room"] = room
 		session["name"] = name
