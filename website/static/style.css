@@ -165,3 +165,8 @@ button:hover {
     color: rgb(43, 59, 75);
     text-shadow: -1px -1px 0 rgb(217, 205, 176), 1px -1px 0 rgb(217, 205, 176), -1px 1px 0 rgb(217, 205, 176), 1px 1px 0 rgb(217, 205, 176);
 }
+
+.msg {
+    margin-top: 5px;
+    color: rgb(25, 34, 44);
+}
