@@ -35,10 +35,8 @@ def disconnect():
 		rooms[room]["members"] -= 1
 		if rooms[room]["members"] <= 0:
 			del rooms[room]
-			
-	
-	send({"name": name, "message": "left the room.", "cause": "player disconnect", "player_list":rooms[room]["players"]}, to=room)
-
+		else:
+			send({"name": name, "message": "left the room.", "cause": "player disconnect", "player_list":rooms[room]["players"]}, to=room)
 
 @socketio.on("message")
 def message(data):
@@ -46,6 +44,3 @@ def message(data):
 	name = session.get("name")
 	
 	send({"name": name+":", "message": data["data"], "cause": "chat message sent"}, to=room)
-
-#if __name__ == '__main__':
-#	socketio.run(app, debug=True)
