@@ -170,3 +170,13 @@ button:hover {
     margin-top: 5px;
     color: rgb(25, 34, 44);
 }
+
+.drawing-board {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border-color: black;
+    border-style: solid;
+    border-width: 0.1px;   
+    height: 100%;
+    width: 99.85%;
+}
